@@ -1,30 +1,31 @@
 import numpy as np
 from sklearn.datasets import load_digits
 
-digits = load_digits()  # 加载数据集
-target = digits.target  # 获取目标标签
+digits = load_digits()  # Datensatz laden
+target = digits.target  # Zielwerte abrufen
 
 def one_hot_encoder(x):
-    """One-Hot Encodes a target variable
+    """One-Hot-Codiert eine Zielvariable
     
     Args:
-        x: Array containing target values
+        x: Array, das die Zielwerte enthält
     
     Returns:
-        An array of shape (n_samples, n_classes) with one-hot encoded target values.
+        Ein Array der Form (n_samples, n_classes) mit one-hot-codierten Zielwerten.
     """
-    # 获取类的数量，这里是10（数字0到9）
+    # Anzahl der Klassen ermitteln, hier sind es 10 (Zahlen von 0 bis 9)
     nclasses = 10
-    # 初始化一个形状为 (样本数量, 类别数量) 的全零数组
+    # Ein Array mit Nullen initialisieren, das die Form (Anzahl der Proben, Anzahl der Klassen) hat # 初始化一个形状为 (样本数量, 类别数量) 的全零数组
     out = np.zeros((x.shape[0], nclasses))
-    # 对于每个样本，将对应的类索引位置设为1
+    # Für jede Probe den Index der entsprechenden Klasse auf 1 setzen #对于每个样本，将对应的类索引位置设为1
     for i, x_ in enumerate(x):
         out[i, x_] = 1
     return out
 
-# 测试函数
+# Funktion testen
 target_oh = one_hot_encoder(target)
-print(f"target value: {target[40]}, corresponding one-hot vector: {target_oh[40,:]}")
+print(f"Zielwert: {target[40]}, entsprechender One-Hot-Vektor: {target_oh[40,:]}")
+
 
 #for i in range(50):
  #   print(f"Sample {i}, target value: {target[i]}")
