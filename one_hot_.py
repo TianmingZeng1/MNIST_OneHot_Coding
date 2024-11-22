@@ -15,11 +15,11 @@ def one_hot_encoder(x):
     """
     # Anzahl der Klassen ermitteln, hier sind es 10 (Zahlen von 0 bis 9)
     nclasses = 10
-    # Ein Array mit Nullen initialisieren, das die Form (Anzahl der Proben, Anzahl der Klassen) hat # 初始化一个形状为 (样本数量, 类别数量) 的全零数组
+    # Ein Array mit Nullen initialisieren, das die Form (Anzahl der Proben, Anzahl der Klassen) hat        # 初始化一个形状为 (样本数量, 类别数量) 的全零数组
     out = np.zeros((len(x), nclasses))
-    # Für jede Probe den Index der entsprechenden Klasse auf 1 setzen #对于每个样本，将对应的类索引位置设为1
+    # Für jede Probe den Index der entsprechenden Klasse auf 1 setzen       #对于每个样本，将对应的类索引位置设为1
     for i, x_ in enumerate(x):
-        out[i, x_] = 1
+        out[i, x_] = 1                                                    #定义全零的数组
     return out
 
 # Funktion testen
