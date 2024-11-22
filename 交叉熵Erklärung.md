@@ -82,7 +82,7 @@ L = -\sum_{i} y_{	ext{true},i} \cdot \log(y_{	ext{pred},i})
 - **`y_pred`** ist die Wahrscheinlichkeitsverteilung, die vom Modell vorhergesagt wurde.
 - Der Verlust ist geringer, wenn die Vorhersagewahrscheinlichkeit für die korrekte Kategorie nahe bei `1` liegt. Durch Minimierung dieses Verlusts verbessert sich das Modell in Bezug auf seine Vorhersagefähigkeit.
 
-### Zusammenfassung für die Erklärung an den Professor
+### Zusammenfassung für die Erklärung 
 Diese Funktion berechnet die kategorische Kreuzentropie, um die Differenz zwischen den Vorhersagen des Modells und den echten Labels zu messen. Sie nutzt dabei drei Eingaben: die Modellparameter (`params`), die Eingabedaten (`x`) und die echten Labels (`y_true`). Der Vorwärtsdurchlauf des Modells liefert die Vorhersage (`y_pred`), aus der dann die Kreuzentropie für jedes Beispiel berechnet wird. Die Kreuzentropie ermöglicht es, die Ähnlichkeit zwischen der vorhergesagten und der echten Wahrscheinlichkeitsverteilung zu messen. Schließlich wird der durchschnittliche Verlust aller Beispiele zurückgegeben, um das Modell insgesamt zu optimieren und seine Vorhersagegenauigkeit zu verbessern.
 
 
